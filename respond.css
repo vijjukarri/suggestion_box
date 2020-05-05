@@ -1,0 +1,12 @@
+body{
+    text-align: center;
+}
+button{
+    background-color: green;
+}
+input{
+    margin:15px 0;
+}
+form{
+    top:15px;
+}

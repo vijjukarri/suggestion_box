@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<head>
+    <title>users</title>
+    <script src='https://kit.fontawesome.com/b99e675b6e.js'></script>
+    <link rel="stylesheet" type="text/css" href="sidebar.css">
+</head>
+<body>
+    <h1>user details</h1>
+    
+    <div class='wrapper'>
+        <div class='sidebar1'>
+            <ul>
+                <li><a href="/admin"><i class="fas fa-user"></i>Admin</a></li>
+                <li><a href='/responses'><i class="fas fa-address-card"></i>Responses</a></li>
+            </ul>
+        </div>
+    </div>
+    <table border="1" id='table'>
+        <tr>
+            <th>department</th>
+            <th>category</th>
+            <th>problemtype</th>
+            <th>email</th>
+            <th>files</th>
+            <th>description</th>
+            <th>date</th>
+            <th>responses</th>
+            <th>ignore</th>
+        </tr>
+        <% for (var i = 0; i < items.length;i++) { %>
+            <tr>
+              <td><%= items[i].dept %></td>
+              <td><%= items[i].category %></td>
+              <td><%= items[i].problem_type %></td>
+              <td><%= items[i].email %></td>
+              <td><a href=<%= "/suggestion/uploads/"+items[i].files %>><img src=<%= "/suggestion/uploads/"+items[i].files %> alt="no image" width='100px'></a></td>
+              <td><%= items[i].description %></td>
+              <td><%= items[i].enterdate %></td>
+              <td>
+                    <a href='/responses/<%=items[i].email %>/<%=items[i].dept %>/<%=items[i].category %>/<%=items[i].problem_type %>/<%=items[i].description %>' class='btn btn-danger'>respond</a>
+            </td>
+            <td>
+                
+                  <a href='/delete/<%=items[i].id %>' class='btn btn-danger'>ignore</a>
+                
+              </td>
+
+            </tr>    
+           <% } %>
+    </table>
+</body>
+</html>

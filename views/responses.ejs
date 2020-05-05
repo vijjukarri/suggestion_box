@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<head>
+    <title>responses</title>
+    <script src='https://kit.fontawesome.com/b99e675b6e.js'></script>
+    <link rel="stylesheet" type="text/css" href="sidebar.css">
+</head>
+<body>
+        <div class='wrapper'>
+        <div class='sidebar1'>
+            <ul>
+                <li><a href="/admin"><i class="fas fa-user"></i>Admin</a></li>
+                <li><a href='/responses'><i class="fas fa-address-card"></i>Responses</a></li>
+            </ul>
+        </div>
+    </div>
+    <h1>user details</h1>
+    <table border="1" id='table'>
+        <tr>
+            <th>department</th>
+            <th>category</th>
+            <th>problemtype</th>
+            <th>email</th>
+            <th>description</th>
+            <th>date</th>
+        </tr>
+        <% for (var i = 0; i < items.length;i++) { %>
+            <tr>
+              <td><%= items[i].dept %></td>
+              <td><%= items[i].category %></td>
+              <td><%= items[i].problem_type %></td>
+              <td><%= items[i].email %></td>
+              <td><%= items[i].description %></td>
+              <td><%= items[i].respondeddate %></td>
+              
+
+            </tr>    
+           <% } %>
+    </table>
+</body>
+</html>

@@ -1,0 +1,11 @@
+body{
+    background: url(design.png) no-repeat;
+    background-size: cover;
+    align-content: center;
+
+}
+h2{
+    margin-left: auto;
+    margin-right: auto;
+    width: 8em;
+}

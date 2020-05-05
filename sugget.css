@@ -1,0 +1,76 @@
+@import 'https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap';
+body{
+    text-align: center;
+    font-family: sans-serif;
+   
+}
+.form1{
+    width:100%;
+    background-color:midnightblue;
+}
+.textbox{
+    margin:10px 0;
+    font-size: 20px;
+    justify-content: space-around;
+}
+
+.btn{
+    margin: 8px 0;
+    background-color: green;
+    width: 100px;
+}
+select{
+    width: 450px;
+    height: 25px;
+}
+input{
+    width: 450px;
+    height: 25px;
+}
+label{
+    width: 450px;
+    height: 25px;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    font-family: sans-serif;
+}
+
+.wrapper{
+    display: flex;
+    position: relative;
+}
+.wrapper .sidebar1{
+    margin-top: 10px;
+    position: fixed;
+    width: 200px;
+    height: 55%;
+    background: #4b4276;
+    padding: 30px 0;
+}
+.wrapper .sidebar1 ul li{
+    padding:15px;
+    border-bottom: 1px solid rgba(0,0,0,0.5);
+    border-bottom: 1px solid rgba(225,225,225,0.5);
+}
+a{
+    color: rgb(255, 95, 5);
+}
+.wrapper.sidebar1 ul li a{
+    display: block;
+    color: hotpink;
+}
+.wrapper .sidebar1 ul li a .fas{
+    width:25px;
+}
+.wrapper .sidebar1 ul li:hover{
+    background: #594f8d;
+}
+.wrapper .sidebar1 ul li:hover a{
+    color:#fff;
+}

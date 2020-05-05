@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<head>
+   
+    <title>email</title>
+    <style type='text/css'>
+    body{
+    text-align: center;
+    font-family: sans-serif;
+    font-size: 18px;
+}
+.form1{
+    width: 30%;
+    position: absolute;
+    box-shadow: 10px;
+    top:30%;
+    left:40%;
+    margin-bottom:20px;
+    box-shadow: 2px 2px 2px 2px;
+    justify-content: space-around;
+}
+input,textarea{
+    width:30%;
+    overflow:hidden;
+    margin:10px 0;
+    font-size: 20px;
+}
+
+.btn{
+    margin: 8px 0;
+}
+    </style>
+</head>
+<body>
+        
+    <form action='/sendmail/<%= emailsi %>/<%= dept %>/<%= category %>/<%=problem_type %>/<%=description %>' method='post'>
+        <div class='wrapper'>
+            <div class='textbox'>
+                    <input type="email" value=<%= emailsi %> name='toaddress' required>
+            </div>
+        <div class='textbox'>
+    <input type="text" placeholder="enter subject" name='subject' required>
+    </div>
+    <div class='textbox'>
+    <textarea  placeholder="enterbody" name='body' rows="5" cols="15" required></textarea>
+        
+        </div>
+    <div class='btn'>
+    <button type='submit' style="background-color: red;">send email</button>
+    </div>
+    </form>
+</body>
+</html>

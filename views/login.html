@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<head>
+    <title>login page</title>
+    <link rel="stylesheet" type="text/css" href="login.css">
+</head>
+<body>
+        <img src="icon.png" width=80px height=80px>  
+        <form onsubmit="return validate();" action="/admin"> 
+    <div class="loginbox">
+        <div class="textbox">
+            <i class="fa fa-user" aria-hidden="true"></i>
+        <input name='username' id='username' placeholder="enter username" type="text">
+        <label id='u' style="color:red; visibility: hidden;">invalid</label>
+        </div>
+        <div class="textbox">
+        <i class="fa fa-lock" aria-hidden="true"></i>
+        <input name='password' id='password' placeholder="enter password" type="password">
+        <label id='p' style="color:red; visibility: hidden;">invalid</label>
+        </div>
+        <button type="submit" class="btn">submit</button>
+    </div>
+    </form>
+</body>
+</html>
+<script type="text/javascript">
+function validate(){
+    var b=document.getElementById("username").value;
+    var c=document.getElementById("password").value;
+    if(b=="exam" && c==123456)
+    {
+        return true;
+    }
+    else if(b!="exam" || c!=123456)
+    {
+        if(b!="exam" && c!=123456)
+        {
+      document.getElementById('u').style.visibility="visible";
+      document.getElementById('p').style.visibility="visible";
+      return false;
+        }
+    else if(c!=123456)
+    {
+      document.getElementById('p').style.visibility="visible";
+      return false;
+    }
+    else {
+
+        document.getElementById('u').style.visibility="visible";
+      return false;
+    }
+    }
+}
+</script>

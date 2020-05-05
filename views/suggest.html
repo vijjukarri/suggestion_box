@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<head>
+        <link rel="stylesheet" type="text/css" href="sugget.css">
+    <title>sugg</title>
+</head>
+<body>
+        <div class='wrapper'>
+                <div class='sidebar1'>
+                    <ul>
+                        <li><a href="/login"><i class="fas fa-user"></i>Admin login</a></li>
+                    </ul>
+                </div>
+            </div>
+    <form method="POST" action='/upload' enctype="multipart/form-data">
+        <div class="form1">
+            <div class='textbox'>
+                    <select id='dept' name='dept' required> 
+                        <option>department name</option>
+                        <option>cse</option>
+                        <option>ece</option>
+                        <option>civil</option>
+                        <option>mechanical</option>
+                        <option>EEE</option>
+                    </select>
+            </div>
+            <div class='textbox'>
+            <select id='category' name='category'>
+                <option>suggestion</option>
+                <option>complaint</option>
+            </select>
+            </div>
+            <div class='textbox'>  
+                <input placeholder='problem type' id='problem_type' name='problem_type' type='text' size='50' required>
+            </div>
+            <div class='textbox'>
+                <input placeholder="email" id='email' name='email' type='email' size='50' required>
+            </div>
+            <div class='textbox'> 
+           <label style="color:red; font-size: 15px">*optional  <input type='file' id='files' name='files'></label> 
+            </div>
+            <div class='textbox' required> 
+                <textarea placeholder="description about the problem" id='description' name='description' rows="5" cols="50" required></textarea>
+            </div>
+            <button type='submit' class='btn'>submit</button>
+        </div>
+    </form>
+   
+</body>
+</html>
